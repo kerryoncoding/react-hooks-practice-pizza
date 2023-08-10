@@ -3,7 +3,7 @@ import React from "react";
 function PizzaForm({pizzaFormItem}) {
 
   console.log("here", pizzaFormItem)
-  
+
   return (
     <form onSubmit={null /*handle that submit*/}>
       <div className="form-row">
@@ -12,7 +12,7 @@ function PizzaForm({pizzaFormItem}) {
             className="form-control"
             type="text"
             name="topping"
-            placeholder="Pizza Topping"
+            placeholder={pizzaFormItem.topping}
           />
         </div>
         <div className="col">

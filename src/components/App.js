@@ -6,7 +6,7 @@ import PizzaList from "./PizzaList";
 function App() {
 
   const [pizzaMenu, setPizzaMenu] = useState([])
-  const [pizzaFormItem, setPizzaFormItem] = useState([])
+  const [pizzaFormItem, setPizzaFormItem] = useState({topping: "Pizza Topping", size: "Small", vegetarian: false })
 
   const URL = "http://127.0.0.1:3001/pizzas"
 
@@ -22,7 +22,7 @@ function App() {
     let tempPizza = pizzaMenu.map((item)=>item)
     let filteredPizza = tempPizza.filter((item) => item.id == id)
     // console.log(filteredPizza)  
-    setPizzaFormItem(filteredPizza)
+    setPizzaFormItem(filteredPizza[0])
   }
 
 
