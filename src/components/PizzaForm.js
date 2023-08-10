@@ -1,6 +1,9 @@
 import React from "react";
 
-function PizzaForm() {
+function PizzaForm({pizzaFormItem}) {
+
+  console.log("here", pizzaFormItem)
+  
   return (
     <form onSubmit={null /*handle that submit*/}>
       <div className="form-row">
